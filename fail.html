@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Authentication Failed</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+body {
+    background: #ffffff;
+    color: #1f2937;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+.card {
+    width: 100%;
+    max-width: 380px;
+    text-align: center;
+}
+.card h2 {
+    font-weight: 600;
+    font-size: 26px;
+    margin-bottom: 12px;
+    color: #dc2626;
+}
+.sub-text {
+    color: #6b7280;
+    font-size: 15px;
+    margin-bottom: 36px;
+    line-height: 1.6;
+}
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    background-color: #2563eb;
+    color: #fff;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+.btn:hover {
+    background-color: #1d4ed8;
+}
+</style>
+</head>
+<body>
+<div class="card">
+    <h2>❌ Invalid Voucher Code</h2>
+    <p class="sub-text">The code is wrong, expired or already used. Please check and try again.</p>
+    <a class="btn" href="index.html">Try Again</a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+<script>
+function urlcat(obj) {
+    var serach = window.location.search;
+    var href = serach.replace('?','&');
+    obj.each(function(){
+        var url = $(this).attr("href") + href;
+        $(this).attr("href",url);
+    });
+}
+$(function(){
+    urlcat($("a"));
+    urlcat($("form"));
+});
+</script>
+</body>
+</html>

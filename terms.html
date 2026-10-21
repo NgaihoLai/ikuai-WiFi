@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Network Usage Policy</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+body {
+    background: #fff;
+    color: #1f2937;
+    padding: 30px 24px;
+}
+.container {
+    max-width: 680px;
+    margin: 0 auto;
+}
+h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    text-align:center;
+}
+h3 {
+    font-size:17px;
+    margin:22px 0 8px;
+}
+p {
+    font-size:15px;
+    line-height:1.7;
+    color:#4b5563;
+    margin-bottom:14px;
+}
+.back-btn{
+    display:block;
+    width:fit-content;
+    margin:36px auto 0;
+    padding:12px 28px;
+    background:#2563eb;
+    color:#fff;
+    border-radius:10px;
+    text-decoration:none;
+}
+.back-btn:hover{
+    background:#1d4ed8;
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Network Usage Policy & Disclaimer</h1>
+
+    <p>This wireless network is provided solely as a complimentary convenience service. By connecting to and using this WiFi network, you acknowledge, accept and agree to be bound by all terms below. If you do not agree, you must disconnect immediately and stop using this network.</p>
+
+    <h3>1. User Responsibility</h3>
+    <p>All internet traffic, actions, communications, downloads and content accessed or transmitted via this network are the sole responsibility of the connected user. The operator does not monitor user content in real time but may retain connection logs as required by applicable laws. You shall not use this network for any illegal, infringing, fraudulent, harmful or offensive activities.</p>
+
+    <h3>2. No Guarantee of Service</h3>
+    <p>The network is provided on an “AS AVAILABLE” and “AS IS” basis. The operator makes NO warranties of any kind, whether express or implied, including without limitation warranty of stable connection, speed, uptime, security, availability or freedom from interruption. Service may be suspended, throttled or terminated at any time without prior notice.</p>
+
+    <h3>3. Limitation of Liability</h3>
+    <p>To the fullest extent permitted by law, the operator shall NOT be liable for any direct, indirect, incidental, consequential, special or punitive damages arising out of or related to your use or inability to use this network. This includes, but is not limited to, data loss, device damage, virus infection, hacking attacks, identity theft, financial loss or third-party claims.</p>
+
+    <h3>4. Security Warning</h3>
+    <p>Public WiFi networks are inherently insecure. Your data may be visible to other users on the same network. You are solely responsible for taking protective measures such as using VPN, HTTPS and secure authentication for sensitive transactions. The operator assumes no responsibility for any security breach.</p>
+
+    <h3>5. Access Termination</h3>
+    <p>The operator reserves the absolute right to block, restrict or terminate your network access at any time, for any reason, without notice, including suspected misuse or violation of this policy.</p>
+
+    <h3>6. Governing Law</h3>
+    <p>These terms shall be governed by local applicable laws. Any dispute arising from network use shall be resolved in the local jurisdiction.</p>
+
+    <p><strong>By clicking the link and returning to the login page, you confirm that you have read, understood and accept this full disclaimer and usage policy.</strong></p>
+
+    <a class="back-btn" href="index.html">Back to Login Page</a>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+<script>
+function urlcat(obj) {
+    var serach = window.location.search;
+    var href = serach.replace('?','&');
+    obj.each(function(){
+        var url = $(this).attr("href") + href;
+        $(this).attr("href",url);
+    });
+}
+$(function(){
+    urlcat($("a"));
+    urlcat($("form"));
+});
+</script>
+</body>
+</html>
